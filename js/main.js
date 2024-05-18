@@ -31,10 +31,22 @@
 
 
     // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 5,
-        time: 2000
+    $(document).ready(function() {
+        // Initialize CounterUp on elements with data-toggle="counter-up"
+        $('[data-toggle="counter-up"]').counterUp({
+            delay: 5,
+            time: 2000
+        });
+
+        // Attach CounterUp to the scroll event using Waypoints
+        $('[data-toggle="counter-up"]').waypoint(function() {
+            $(this.element).counterUp({
+                delay: 5,
+                time: 2000
+            });
+        }, { offset: 'bottom-in-view' });
     });
+
 
 
     // Event carousel
