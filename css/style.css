@@ -117,6 +117,11 @@
   transition: 0.5s;
 }
 
+#ldce-heading
+{
+  font-size: calc(0.575rem + 1.5vw);
+}
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active,
 .sticky-top.bg-white .navbar .navbar-nav .nav-link:hover,
@@ -164,6 +169,50 @@
   transition: 0.5s;
   opacity: 1;
 }
+
+.navbar .navbar-brand
+{
+  display: flex;
+  gap: 9px;
+}
+
+.fa-house:hover
+{
+  color: #f8b864 !important;
+  transition: 0.5s linear;
+}
+
+.item-heading
+{
+  font-size: large;
+  color: #f8b864 !important;
+}
+
+@media (width > 768px) {
+  .flex-b
+  {
+    display: flex !important;
+  }
+  .navbar .ldce-logo
+  {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (width < 768px)
+{
+  #ldce-heading
+  {
+    font-size: calc(0.75rem + 1.5vw);
+  }
+  .ldce-logo
+  {
+    width: 0;
+    height: 0;
+  }
+}
+
 /*** Navbar End ***/
 
 /*** Carousel Start ***/
@@ -326,7 +375,7 @@
 }
 .donation .donation-item::after {
   width: 100%;
-  height: 427px;
+  height: 600px;
   position: absolute;
   overflow: hidden;
   content: "";
